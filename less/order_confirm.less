@@ -1,0 +1,208 @@
+@import 'common.less';
+
+.order-confirm {
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0;
+    background: @label;
+    .address {
+      display: flex;
+      padding: .8rem 0;
+      justify-content: center;
+      align-items: stretch;
+      background: @white;
+      border-bottom: 1px solid @light-gray;
+      margin-bottom: .8rem;
+      .detail {
+        flex: 1;
+        padding-left: 1.5rem;
+        font-size: .9em;
+        .tel {
+          float: right;
+        }
+        p:last-child {
+          margin-top: .8rem;
+        }
+      }
+      .empty-address {
+        flex: 1;
+        min-height: 5.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: @dark-gray;
+        .iconfont {
+          font-size: 1.6em;
+          margin-right: .4rem;
+        }
+      }
+      .tab-switch {
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .good-detail {
+      display: flex;
+      padding: .8rem;
+      background: @white;
+      border-top: 1px solid @light-gray;
+      border-bottom: 1px solid @border-gray;
+      .good-view {
+        height: 5rem;
+        margin-right: .6rem;
+      }
+      .detail {
+        font-size: .9em;
+        .size {
+          margin: .3rem 0;
+          font-size: .8em;
+          color: @dark-gray;
+        }
+        .good-info {
+          font-size: .8em;
+          .num {
+            float: right;
+            color: @dark-gray;
+          }
+        }
+      }
+    }
+    .remark {
+      padding: .6rem .8rem;
+      margin-bottom: .6rem;
+      background: @white;
+      display: flex;
+      font-size: .9em;
+      align-items: center;
+      border-bottom: 1px solid @light-gray;
+      .title {
+        width: 3rem;
+      }
+      .remark-input {
+        flex: 1;
+        min-height: 1.2rem;
+        padding: .2rem .4rem;
+      }
+    }
+    .module {
+      border-top: 1px solid @light-gray;
+      border-bottom: 1px solid @light-gray;
+      background: @white;
+      margin-bottom: .6rem;
+      display: flex;
+      &.module-fixed {
+        display: block;
+      }
+      .title {
+        flex: 1;
+        padding: .6rem .8rem;
+      }
+      .tab-switch {
+        width: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .6rem .8rem;
+        font-size: .85em;
+        .iconfont {
+          margin-left: .5rem;
+        }
+      }
+      dl {
+        dd {
+          padding: .6rem .8rem;
+          border-bottom: 1px solid @border-gray;
+          font-size: .95em;
+        }
+      }
+      .extra-price {
+        padding: .6rem .8rem;
+        font-size: .8em;
+        color: @dark-gray;
+        border-bottom: 1px solid @border-gray;
+        p:last-child {
+          margin-top: .5rem;
+        }
+      }
+      .total {
+        padding: .6rem .8rem;
+        font-size: .95em;
+      }
+    }
+    .protocol {
+      padding: 0 .8rem;
+      font-size: .8em;
+      margin-bottom: .8rem;
+      color: @dark-gray;
+      display: flex;
+      input[type=checkbox] {
+        zoom: 140%;
+        margin-right: .5rem;
+      }
+      .more {
+        font-size: .9;
+        color: @dark;
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: @white;
+    height: 2.5rem;
+    display: flex;
+    align-items: stretch;
+    text-align: center;
+    line-height: 2.5rem;
+    width: 100vw;
+    border-top: 1px solid @border-gray;
+    .title {
+      font-size: .9em;
+    }
+    .total-price,
+    .submit {
+      flex: 1;
+    }
+    .submit {
+      background: @main;
+      font-size: .95em;
+    }
+  }
+}

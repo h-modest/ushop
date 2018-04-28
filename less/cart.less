@@ -1,0 +1,225 @@
+@import 'common.less';
+
+.cart {
+  min-height: 100vh;
+  background: @label;
+  &.empty-cart {
+    background: @white;
+    header {
+      height: 2.5rem;
+    }
+    .content {
+      padding: 2.5rem 0 3.5rem 0;
+      min-height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: @dark-gray;
+      text-align: center;
+      .empty-cart-view {
+        height: 10rem;
+      }
+      .go-shopping {
+        margin: 0 auto;
+        display: block;
+        height: 1.8rem;
+        width: 6rem;
+        border: 1px solid @main;
+        border-radius: 1.8rem;
+        text-align: center;
+        line-height: 1.8rem;
+        margin-top: 2rem;
+        color: @main;
+      }
+    }
+  }
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0 6rem 0;
+    .section-select {
+      background: @white;
+      display: flex;
+      height: 2.5rem;
+      border-bottom: 1px solid @border-gray;
+      .goods-select {
+        .ushop-checkbox {
+          font-size: 1.2em;
+          margin-right: 0.4rem;
+        }
+      }
+      .goods-select,
+      .goods-delete {
+        width: 6.4rem;
+        display: flex;
+        justify-content: center;
+        font-size: .9em;
+        line-height: 2.5rem;
+        .iconfont {
+          font-size: 1.4em;
+          margin-right: 0.3rem;
+          color: @dark-gray;
+          &.selected {
+            color: @main;
+          }
+        }
+      }
+      .goods-delete {
+        color: @dark-gray;
+      }
+      .module-empty {
+        flex: 1;
+      }
+    }
+    ul {
+      li {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        background: @white;
+        border-bottom: 1px solid @border-gray;
+        .good-select {
+          width: 1.2rem;
+          color: @dark-gray;
+          .ushop-checkbox {
+            font-size: 1.2em;
+          }
+        }
+        .good-view {
+          height: 5rem;
+          padding: 0 0.3rem;
+        }
+        .description {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          font-size: .9em;
+          overflow: hidden;
+          min-height: 5rem;
+          p {
+            height: 1.2rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          .size {
+            margin-top: .4rem;
+            font-size: .8em;
+            color: @dark-gray;
+          }
+          .price-total {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            .price {
+              flex: 1;
+            }
+            .num {
+              width: 5.4rem;
+              height: 1.8rem;
+              border: 1px solid @border-gray;
+              border-radius: .4rem;
+              display: flex;
+              background: @white;
+              .btn,
+              input[type=number] {
+                text-align: center;
+                line-height: 1.8rem;
+                width: 1.8rem;
+                height: 1.8rem;
+              }
+              .btn {
+                position: relative;
+                &::after {
+                  content: '';
+                  height: 1.4rem;
+                  width: .05rem;
+                  background: @gray;
+                  position: absolute;
+                  top: 0.2rem;
+                }
+                &.btn-reduce::after {
+                  left: 1.8rem;
+                }
+                &.btn-add::after {
+                  left: 0;
+                }
+              }
+            }
+          }
+        }
+        .good-recycle {
+          width: 2rem;
+          padding: .4rem 0;
+          height: 5.2rem;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          color: @dark-gray;
+          .iconfont {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background: @white;
+    .total-pay {
+      height: 2.5rem;
+      display: flex;
+      text-align: center;
+      line-height: 2.5rem;
+      font-size: .9em;
+      .total {
+        flex: 2;
+        font-size: .9em;
+        padding-left: .8rem;
+        text-align: left;
+      }
+      .balance {
+         flex: 1;
+       }
+      .balance {
+        background: @main;
+      }
+    }
+  }
+}

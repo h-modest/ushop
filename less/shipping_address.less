@@ -1,0 +1,182 @@
+@import "common.less";
+
+.shipping-address {
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    line-height: 2.5rem;
+    .section-side {
+      width: 3rem;
+      color: @dark;
+      position: relative;
+      font-size: .95em;
+      .iconfont {
+        font-size: 1rem;
+      }
+    }
+    .section-title {
+      flex: 1;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0 3rem 0;
+    ul {
+      li {
+        display: flex;
+        border-bottom: 1px solid @border-gray;
+        position: relative;
+        .transition {
+          transition: all .3s ease-in-out;
+        }
+        &.hover {
+          .section-sidebar {
+            width: 2.5rem;
+          }
+          .section-outside {
+            width: 0;
+          }
+          .setting-default {
+            .inferior {
+              visibility: inherit;
+            }
+          }
+        }
+        .section-sidebar {
+          width: 0;
+          display: flex;
+          overflow: hidden;
+          .transition;
+          .section-aside {
+            width: 2.5rem;
+            .items-center;
+            &.section-delete {
+              background: @label;
+              color: @main;
+            }
+            .iconfont {
+              font-size: 1.2em;
+            }
+          }
+        }
+        .section-outside {
+          width: 2.5rem;
+          .transition;
+        }
+        .section-main {
+          font-size: .9em;
+          padding: .5rem;
+          .flex-1;
+          .description {
+            margin-top: .5rem;
+            .tel {
+              margin-left: 1.2rem;
+            }
+          }
+        }
+        .setting-default {
+          text-align: right;
+          font-size: .95em;
+          &.default-address {
+            .inferior {
+              visibility: hidden;
+            }
+          }
+          .inferior {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 3rem;
+    .address-added {
+      text-align: center;
+      line-height: 3rem;
+      height: 3rem;
+      background: @main;
+      .pointer;
+      .iconfont {
+        margin-left: .3rem;
+        font-size: 1.4em;
+      }
+    }
+  }
+  .modal-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
+    &.hide {
+      display: none;
+    }
+  }
+  .modal-default,
+  .modal-delete {
+    position: fixed;
+    bottom: -100rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1100;
+    width: 80vw;
+    transition: bottom .3s ease-in-out;
+    &.show {
+      bottom: .6rem;
+    }
+    .modal-header {
+      background: @white;
+      border-radius: .5rem;
+      text-align: center;
+      margin-bottom: .4rem;
+      .inferior {
+        font-size: .9em;
+        padding: .4rem 0;
+        border-bottom: 1px solid @border-gray;
+      }
+      .modal-confirm {
+        padding: .7rem 0;
+        .pointer;
+      }
+    }
+    .modal-close {
+      padding: .7rem 0;
+      background: @white;
+      border-radius: .5rem;
+      text-align: center;
+      .pointer;
+    }
+  }
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1rem;
+    background: rgba(0,0,0,0.7);
+    border-radius: 0.5rem;
+    text-align: center;
+    color: @white;
+    z-index: 100;
+    .iconfont {
+      font-size: 2.2em;
+    }
+  }
+}

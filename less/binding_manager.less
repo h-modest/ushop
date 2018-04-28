@@ -1,0 +1,69 @@
+@import "common.less";
+
+.binding-manager {
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    line-height: 2.5rem;
+    .section-side {
+      width: 3rem;
+      color: @dark;
+      position: relative;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+      .icon-kefu {
+        font-size: 1em;
+      }
+    }
+    .section-title {
+      flex: 1;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    .invite-code {
+      border: 1px solid @dark;
+      padding: .3rem .5rem;
+      height: 1.5rem;
+    }
+    .btn-bingding {
+      width: 6rem;
+      height: 2rem;
+      border-radius: 1rem;
+      background: @main;
+      text-align: center;
+      line-height: 2rem;
+      font-size: 1em;
+      margin: 1.5rem auto;
+      font-size: .9em;
+
+    }
+    .remark {
+      font-size: .8em;
+      color: @dark-gray;
+      p {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}

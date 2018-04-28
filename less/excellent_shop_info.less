@@ -1,0 +1,135 @@
+@import "common.less";
+
+.excellent-shop-info {
+  header {
+    height: 10.5rem;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 10.5rem;
+      background: rgba(0,0,0,.3);
+      z-index: 1;
+    }
+    .section-side,
+    .info-logo,
+    .info-desc {
+      z-index: 100;
+    }
+    .section-side {
+      height: 2rem;
+      a {
+        .items-center;
+        width: 3rem;
+        height: 2rem;
+        color: @white;
+        .pointer;
+      }
+    }
+    .info-logo {
+      .items-center;
+      padding-bottom: .5rem;
+      &.info-default {
+        .default-logo {
+          display: block;
+        }
+        .info-logo-img {
+          display: none;
+        }
+      }
+      .default-logo,
+      .info-logo-img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+      }
+      .default-logo {
+        display: none;
+        background: @white;
+        color: @main;
+        line-height: 6rem;
+        text-align: center;
+      }
+    }
+    .info-desc {
+      font-size: .85em;
+      color: @white;
+      display: flex;
+      text-align: right;
+      .flex-1 {
+        padding-right: 1.5rem;
+        &.user {
+          text-align: left;
+          padding-right: 0;
+          padding-left: 1.5rem;
+        }
+      }
+    }
+  }
+  .content {
+    padding-bottom: 2.2rem;
+    .info-item {
+      margin-bottom: .6rem;
+      background: @white;
+      padding: .8rem 0;
+      &::after {
+        content: '';
+        display: block;
+        width: 100vw;
+        height: .6rem;
+        background: @label;
+      }
+      .item-header {
+        display: flex;
+        align-items: center;
+        padding: 0 .8rem;
+        .info-img {
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50%;
+          margin-right: .6rem;
+        }
+        .title {
+          .flex-1;
+        }
+        .date {
+          font-size: .75em;
+        }
+      }
+      .info-content {
+        font-size: .9em;
+        padding: .8rem .8rem .5rem .8rem;
+        .more {
+          font-size: 1.1em;
+          color: @link-color;
+          margin-left: .5rem;
+        }
+      }
+      .info-img-list {
+        padding: 0 .8rem;
+        .info-pic {
+          float: left;
+          width: 48%;
+          height: 6rem;
+          margin: 0 4% .8rem 0;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: @white;
+    width: 100vw;
+  }
+}

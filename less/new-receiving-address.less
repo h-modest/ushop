@@ -1,0 +1,124 @@
+@import "common.less";
+
+.new-receiving-address {
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0 3rem 0;
+    .module {
+      display: flex;
+      font-size: .95em;
+      color: @dark-gray;
+      align-items: center;
+      border-bottom: 1px solid @border-gray;
+      &.module-column {
+        flex-direction: column;
+        min-height: 6rem;
+        padding: .8rem .6rem;
+        align-items: stretch;
+        .title {
+          padding: 0 0 .8rem 0;
+        }
+        .form-textarea {
+          resize: none;
+          height: 3.5rem;
+          padding: .4rem .6rem;
+        }
+      }
+      &.section-module {
+        align-items: stretch;
+      }
+      .title {
+        .flex-1;
+        padding: .8rem 0 .8rem .6rem;
+      }
+      .form-control {
+        width: 10rem;
+        margin: .4rem .6rem .4rem 0;
+        padding: .4rem .6rem;
+        text-align: right;
+      }
+      .module-select {
+        width: 10rem;
+        text-align: right;
+        padding: .6rem .6rem .6rem 0;
+        font-size: .85em;
+        .select-txt {
+          font-size: .75em;
+        }
+        .iconfont {
+          font-size: 1.4em;
+        }
+      }
+      .setting-redio {
+        width: 3rem;
+        color: @dark-gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .pointer;
+        &.hover {
+          label {
+            .icon-danxuan1 {
+              display: none;
+            }
+            .icon-danxuan {
+              display: inline-block;
+            }
+          }
+        }
+        label {
+          cursor: pointer;
+          .icon-danxuan {
+            display: none;
+          }
+        }
+        .iconfont {
+          font-size: 1.4em;
+          &.icon-danxuan {
+            color: @main;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    width: 100vw;
+    .btn-confirm {
+      .items-center;
+      height: 3rem;
+      width: 100vw;
+      background: @main;
+      .pointer;
+      letter-spacing: .2rem;
+    }
+  }
+}

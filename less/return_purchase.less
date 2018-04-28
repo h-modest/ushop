@@ -1,0 +1,209 @@
+@import "common.less";
+
+.return-purchase {
+  min-height: 100vh;
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0;
+    .good-info {
+      display: flex;
+      background: @white;
+      padding: .6rem;
+      border-bottom: 1px solid @light-gray;
+      .good-select {
+        width: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .ushop-checkbox {
+          font-size: 1.2em;
+        }
+      }
+      .good-pic {
+        width: 4rem;
+        height: 4rem;
+      }
+      .info {
+        .flex-1;
+        padding-left: .6rem;
+        .title {
+          font-size: .85em;
+          .line-overflow;
+        }
+        .inferior {
+          font-size: .7em;
+          margin-top: .5rem;
+        }
+      }
+    }
+    .drawback {
+      background: @white;
+      margin: .5rem 0;
+      font-size: .95em;
+      .reason {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        .title {
+          .flex-1;
+          padding: .5rem 0;
+        }
+        .tab-switch {
+          width: 4rem;
+          padding: .5rem 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: @dark-gray;
+          .pointer;
+          .iconfont {
+            font-size: 1.4em;
+          }
+        }
+      }
+      .back-cash {
+        padding: .3rem 0 .5rem 1rem;
+      }
+      .back-explain {
+        background: @label;
+        padding: .5rem 1rem;
+        color: @dark-gray;
+        font-size: .8em;
+      }
+      .back-reason {
+        display: flex;
+        .title {
+          width: 5rem;
+          padding: .5rem 0 .5rem 1rem;
+        }
+        input[type=text] {
+          .flex-1;
+          padding: .3rem .7rem;
+          font-size: .8em;
+        }
+      }
+    }
+    .module {
+      display: flex;
+      margin: .5rem 0;
+      background: @white;
+      align-items: stretch;
+      &.module-default {
+        align-items: stretch;
+        .title {
+          flex: none;
+          width: 5rem;
+        }
+        input[type=text] {
+          .flex-1;
+          padding: .3rem .7rem;
+          font-size: .8em;
+        }
+      }
+      .title {
+        .flex-1;
+        padding: 1rem 0 1rem 1rem;
+        font-size: .95em;
+      }
+      .tab-switch {
+        width: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .7em;
+        .iconfont {
+          margin-left: .3rem;
+          font-size: 2em;
+        }
+      }
+    }
+    .upload-image {
+      padding: 1rem;
+      background: @white;
+      p {
+        font-size: .95em;
+        .inferior {
+          font-size: .8em;
+        }
+      }
+      .title {
+        font-size: .95em;
+      }
+      ul {
+        padding: 1rem 0;
+        li {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 .3rem .3rem 0;
+          .pointer;
+          .voucher-img {
+            width: 4.5rem;
+            height: 4.5rem;
+          }
+          .photo-default {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 4.3rem;
+            height: 4.3rem;
+            border: .1rem dashed @dark-gray;
+            color: @dark-gray;
+            font-size: .7em;
+            .iconfont {
+              font-size: 3em;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 100vw;
+    font-size: .95em;
+    .submit {
+      background: @main;
+      text-align: center;
+      line-height: 2.5rem;
+    }
+  }
+}

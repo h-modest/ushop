@@ -1,0 +1,142 @@
+@import "common.less";
+
+.binding-id {
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding-top: 2.5rem;
+    font-size: .95em;
+    nav {
+      background: @white;
+      padding: 0 15vw;
+      ul {
+        font-size: .9em;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        color: @dark-gray;
+        li {
+          .flex-1;
+          &.hover {
+            a {
+              border-color: @main;
+              color: @dark;
+            }
+          }
+          &:first-child {
+            margin-right: 2rem;
+          }
+          a {
+            display: block;
+            padding: .6rem .4rem;
+            border-bottom: .1rem solid transparent;
+          }
+        }
+      }
+    }
+    .member-section {
+      background: @white;
+      margin-bottom: .6rem;
+      .transition {
+        transition: all .3s ease-in-out;
+      }
+      &.open {
+        padding-bottom: .2rem;
+        .member-info {
+          margin-bottom: .45rem;
+          .tab-switch .iconfont {
+            transform: rotate(90deg);
+          }
+        }
+        .records-of-consumption {
+          height: 10rem;
+        }
+      }
+      .member-info {
+        display: flex;
+        height: 4.6rem;
+        font-size: .8em;
+        align-items: center;
+        border-bottom: 1px solid @border-gray;
+        .member-logo,
+        .default-logo {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          margin:0 .4rem;
+        }
+        .default-logo {
+          background: @gray;
+        }
+        .flex-1 {
+          text-align: center;
+          overflow: hidden;
+          p {
+            margin-top: .3rem;
+            &.member-title {
+              margin-top: 0;
+              .text-overflow;
+              &.price-title {
+                color: @dark-gray;
+              }
+            }
+          }
+          .member-num {
+            font-size: .75em;
+          }
+          .price {
+            font-size: 1.15em;
+          }
+        }
+        .tab-switch {
+          width: 2rem;
+          height: 4.6rem;
+          .items-center;
+          color: @notice;
+          .pointer;
+          .iconfont {
+            .transition;
+            font-size: 1.4em;
+          }
+        }
+      }
+      .records-of-consumption {
+        height: 0;
+        background: @label;
+        overflow: hidden;
+        .items-center;
+        .transition;
+        .chart-profit {
+          width: 90vw;
+          min-height: 10rem;
+          padding-top: .5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,258 @@
+@import "common.less";
+
+.discovery {
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0 3.5rem 0;
+    font-size: .95em;
+    .nav-info {
+      background: @white;
+      border-bottom-style: solid;
+      .border-image-1px;
+      .nav-img {
+        width: 100vw;
+      }
+      .nav-title {
+        padding: .5rem;
+        font-size: .9em;
+      }
+    }
+    .official-info {
+      margin: .6rem 0;
+      background: @white;
+      padding: .5rem;
+      display: flex;
+      align-items: stretch;
+      border-bottom-style: solid;
+      border-top-style: solid;
+      .border-image-1px;
+      .border-image-1px;
+      .official-logo {
+        width: 4rem;
+        height: 4rem;
+        margin-right: .5rem;
+      }
+      .official-detail {
+        .flex-1;
+        font-size: .95em;
+        overflow: hidden;
+        p {
+          .text-overflow;
+          line-height: 2rem;
+        }
+      }
+      .tab-switch {
+        width: 2rem;
+        color: @dark-gray;
+        line-height: 4rem;
+        text-align: center;
+        .iconfont {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .blog-column {
+      border-top: solid;
+      .border-image-1px;
+      background: @white;
+      nav {
+        padding: 0 .5rem;
+        ul {
+          display: flex;
+          li {
+            .flex-1;
+            padding: 0 .2rem;
+            &.hover {
+              a {
+                color: @dark;
+                border-color: @main;
+              }
+            }
+            a {
+              height: 2.5rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: .95em;
+              border-bottom: 1px solid transparent;
+              color: @dark-gray;
+            }
+          }
+        }
+      }
+      .blog-list {
+        padding: .5rem 0;
+        dl {
+          background: @label;
+          dd {
+            padding: .5rem;
+            margin-bottom: .6rem;
+            background: @white;
+            border-bottom-style: solid;
+            border-top-style: solid;
+            .border-image-1px;
+            &:first-child {
+              border-top-style: none;
+            }
+            .blog-header {
+              display: flex;
+              align-items: center;
+              .shop-logo {
+                height: 3.5rem;
+                width: 3.5rem;
+                border-radius: 50%;
+                margin: 0 .5rem;
+              }
+              .shop-title {
+                .flex-1;
+                font-size: 1em;
+              }
+              .pubdate {
+                width: 2.5rem;
+                font-size: .75em;
+                color: @dark-gray;
+                padding-top: .3rem;
+              }
+            }
+            .blog-content {
+              padding: .5rem 0;
+              font-size: .9em;
+              line-height: 1.3rem;
+              a {
+                display: block;
+                margin: .3rem 0;
+                font-size: 1.1em;
+                color: @link-color;
+              }
+              .img-group {
+                .share-pic {
+                  display: inline-block;
+                  width: 5rem;
+                }
+              }
+            }
+            .blob-footer {
+              display: flex;
+              min-height: 1.5rem;
+              align-items: stretch;
+              .flex-1 {
+                font-size: .85em;
+                text-align: center;
+                line-height: 1.5rem;
+                .pointer;
+                a {
+                  display: block;
+                }
+                &.hover {
+                  color: @main;
+                  .icon-xihuan {
+                    display: none;
+                  }
+                  .icon-xihuan1 {
+                    display: inline-block;
+                  }
+                  .icon-num {
+                    color: @main;
+                  }
+                }
+                .icon-xihuan1 {
+                  display: none;
+                }
+                .iconfont {
+                  font-size: 1.2em;
+                }
+                .icon-txt {
+                  margin: 0 .1rem;
+                }
+                .icon-num {
+                  font-size: .8em;
+                  color: @dark-gray;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: @white;
+    width: 100vw;
+  }
+  .modal-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    &.hide {
+      display: none;
+    }
+  }
+  .modal-share {
+    position: fixed;
+    bottom: -100rem;
+    width: 100vw;
+    background: @white;
+    transition: bottom .5s ease-in-out;
+    font-size: .95em;
+    &.show {
+      bottom: 0;
+    }
+    .modal-header {
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      &::before,
+      &::after {
+        content: '';
+        flex: 1;
+        display: block;
+        height: 1px;
+        background: @gray;
+        margin: 0 1rem;
+      }
+    }
+    .modal-content {
+      padding: 0 2rem;
+      ul {
+        font-size: .85em;
+        li {
+          display: inline-block;
+          margin: 0.5rem .3rem;
+          a {
+            display: block;
+            padding: 0.5rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .modal-close {
+      margin: 1rem 2rem;
+      position: relative;
+      padding: 1rem;
+      text-align: center;
+      border-top: 1px solid gray;
+    }
+  }
+}

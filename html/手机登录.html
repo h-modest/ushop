@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>手机登录</title>
+  <link rel="stylesheet" href="../css/all.css">
+</head>
+<body>
+  <div class="mobile-login">
+    <header>
+      <a class="icon icon-return" href="login.html"></a>
+      <span>手机登录</span>
+    </header>
+    <div class="content">
+      <form method="post" action="#">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="请输入手机号" />
+        </div>
+        <div class="form-group form-group-code normal">
+          <input class="form-code" type="text" placeholder="请输入验证码" />
+          <div class="code-img">
+            <img src="../image/goods.png">
+          </div>
+        </div>
+        <div class="form-group form-group-code">
+          <input class="form-code" type="text" placeholder="请输入验证码" />
+          <span class="line"></span>
+          <div class="code-txt">验证码</div>
+        </div>
+        <div class="doubt">
+          <span class="question">收不到验证码？</span>
+        </div>
+        <div class="form-submit">
+          <button type="submit">登录</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div class="intro">
+        <img class="logo" src="../image/login-logo.png" alt="优店牛" />
+        <p>登录代表您已阅读并同意《点点创用户服务协议》的内容</p>
+      </div>
+    </footer>
+    <div class="modal hide">
+      <div class="modal-shadow"></div>
+      <div class="modal-content">
+        <div class="notice-conent">
+          <p class="title">收不到验证码？</p>
+          <p>1.请检查手机号是否输入正确，港澳台及海外手机号请填写国际区号，再填写手机号码</p>
+          <p>2.检查手机信号是否通畅</p>
+          <p>3.检查手机信号是否通畅</p>
+        </div>
+        <div class="modal-close">关闭后重试</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../exjs/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/mobile_login.js"></script>
+</body>
+</html>

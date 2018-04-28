@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>流水记录</title>
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+<body>
+  <div class="flow-record">
+    <header>
+      <div class="column-header">
+        <a class="section-side" href="店铺.html">
+          <i class="iconfont icon-zuo"></i>
+        </a>
+        <section class="section-title">流水记录</section>
+        <a class="section-side" href="#">
+          <i class="iconfont icon-kefu"></i>
+        </a>
+      </div>
+      <div class="flow-profit">
+        <div class="date">
+          <p><span class="year">2018</span>年</p>
+          <p class="month-column">
+            <span class="month">02</span>月
+            <label class="icon" for="selected-date">
+              <i class="iconfont icon-htmal5icon03"></i>
+              <input type="month" id="selected-date" />
+            </label>
+          </p>
+        </div>
+        <div class="real-profit">
+          <p>盈收（元）</p>
+          <p class="money">3,500</p>
+        </div>
+        <div class="withdrawals">
+          <p>提现（元）</p>
+          <p class="money">4,500</p>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="flow-detail">
+        <div class="overtop">
+          <div class="title">明细</div>
+        </div>
+        <div class="flow-list">
+          <p class="time inferior">5日 - 星期一</p>
+          <ul>
+            <li>
+              <div class="icon-circle">
+                <i class="iconfont icon-yue1"></i>
+              </div>
+              <div class="icon-title">余额提现</div>
+              <div class="icon-price">-500</div>
+            </li>
+            <li>
+              <div class="icon-circle">
+                <i class="iconfont icon-gouwudai"></i>
+              </div>
+              <div class="icon-title">神仙水神仙水神仙水神仙水神仙水</div>
+              <div class="icon-price">+156</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="text/javascript" src="../exjs/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/flow_record.js"></script>
+</body>
+</html>

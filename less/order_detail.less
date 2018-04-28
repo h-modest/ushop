@@ -1,0 +1,231 @@
+@import "common.less";
+
+.order-detail {
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding-top: 2.5rem;
+    font-size: .95em;
+    .order-info {
+      background: @white;
+      .title, .info {
+        padding: .6rem 1rem;
+        border-bottom: 1px solid @border-gray;
+      }
+      .info {
+        .order-detailed {
+          display: flex;
+          font-size: .95em;
+          margin-bottom: .3rem;
+          .order-title {
+            width: 5rem;
+          }
+          .detail {
+            flex: 1;
+          }
+        }
+      }
+    }
+    .logistics-info {
+      margin-top: .8rem;
+      padding: 1rem 0 1rem 1rem;
+      background: @white;
+      border-top: 1px solid @border-gray;
+      border-bottom: 1px solid @border-gray;
+      .title {
+        margin-bottom: 1rem;
+      }
+      ul {
+        li {
+          display: flex;
+          .process-line,
+          .tab-switch {
+            width: 2rem;
+          }
+          .process-line {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &::before {
+              content: '';
+              width: .5rem;
+              height: .5rem;
+              border-radius: 50%;
+              background: @main;
+            }
+            &::after {
+              content: '';
+              flex: 1;
+              width: .1rem;
+              margin-top: .2rem;
+              background: @light-gray;
+            }
+          }
+          .process-detail {
+            .process-title {
+              color: @main;
+              font-size: .85em;
+            }
+            .flex-1;
+            .inferior {
+              font-size: .75em;
+              margin-top: .5rem;
+            }
+          }
+          .tab-switch {
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .iconfont {
+              font-size: 1.6em;
+            }
+          }
+        }
+      }
+    }
+    .good-info {
+      margin: .5rem 0;
+      border-top: 1px solid @border-gray;
+      border-bottom: 1px solid @border-gray;
+      background: @white;
+      &.empty-gap {
+        margin-top: 0;
+        border-top: none;
+      }
+      .goods-info {
+        display: flex;
+        padding: .8rem 1rem;
+        border-bottom: 1px solid @border-gray;
+        .good-pic {
+          width: 5rem;
+        }
+        .good-detail {
+          flex: 1;
+          padding-left: .5rem;
+          font-size: .9em;
+          .title {
+            .line-overflow;
+          }
+          .size {
+            margin-top: .5rem;
+            font-size: .7em;
+          }
+        }
+        .good-price {
+          width: 5rem;
+          font-size: .95em;
+          text-align: right;
+          .num {
+            margin-top: .6rem;
+            font-size: .75em;
+          }
+        }
+      }
+      .order-price {
+        display: flex;
+        padding: .8rem 1rem;
+        .title, .price {
+          .flex-1;
+          p:nth-child(2), p:nth-child(3) {
+            font-size: .9em;
+          }
+          p:nth-child(2) {
+            margin-top: .6rem;
+          }
+          p:nth-child(3) {
+            margin-top: .3rem;
+            margin-bottom: .6rem;
+          }
+        }
+        .price {
+          text-align: right;
+          p:first-child, p:nth-child(2) {
+            color: @main;
+          }
+          p:nth-child(2), p:nth-child(3) {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+    .deliver-info, .refund-info {
+      padding: .8rem 0;
+      background: @white;
+      border-top: 1px solid @border-gray;
+
+      .title {
+        padding: 0 1rem .5rem 1rem;
+        border-bottom: 1px solid @border-gray;
+      }
+      .detail {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: .95em;
+        .receipt-title {
+          width: 5rem;
+        }
+        p {
+          margin-bottom: .3rem;
+        }
+      }
+      .btn-group {
+        padding: .6rem 1rem;
+        text-align: right;
+        .btn {
+          display: inline-block;
+          width: 4.5rem;
+          height: 1.6rem;
+          text-align: center;
+          margin: 0 .2rem;
+          line-height: 1.6rem;
+          font-size: .85em;
+          border-radius: .5rem;
+          &.btn-default {
+            border: 1px solid @dark;
+          }
+          &.btn-primary {
+            background: @main;
+          }
+        }
+      }
+    }
+    .refund-info {
+      margin-top: .8rem;
+    }
+  }
+}

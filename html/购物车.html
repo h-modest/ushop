@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车</title>
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+<body>
+  <div class="cart">
+    <header>
+      <a class="section-side return" href="#">
+        <i class="iconfont icon-zuo"></i>
+      </a>
+      <section class="section-title">购物车</section>
+    </header>
+    <section class="content">
+      <section class="section-select">
+        <div class="goods-select">
+          <!-- <i class="iconfont icon-gou selected" for="all-checked"></i> -->
+          <label class="ushop-checkbox">
+            <input type="checkbox" hidden/>
+          </label>
+          <span>优店购物</span>
+        </div>
+        <div class="module-empty"></div>
+        <div class="goods-delete">全部删除</div>
+      </section>
+      <ul>
+        <li>
+          <div class="good-select">
+            <label class="ushop-checkbox">
+              <input type="checkbox" hidden/>
+            </label>
+          </div>
+          <img src="../image/goods.png" alt="" class="good-view" />
+          <div class="description">
+            <p>BBF波波熊迷你小熊香水 明星联名款</p>
+            <p class="size">规格:限量版女士香水（玫红色）</p>
+            <div class="price-total">
+              <span class="price">￥800</span>
+              <div class="num">
+                <div class="btn btn-reduce">
+                  <i class="iconfont icon-plus-minus"></i>
+                </div>
+                <input type="number" value="1" min="1">
+                <div class="btn btn-add">
+                  <i class="iconfont icon-jia"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="good-recycle">
+            <i class="iconfont icon-huishouzhan"></i>
+          </div>
+        </li>
+      </ul>
+      <div class="empty-shopping-cart hide">
+        <img src="../image/empty-cart.png" alt="" class="empty-cart-view">
+        <p>购物车是空的</p>
+        <a href="#" class="go-shopping">去逛逛</a>
+      </div>
+    </section>
+    <footer>
+      <div class="total-pay">
+        <div class="total">总计：￥1600.0</div>
+        <a class="balance" href="#">结算（2）</a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="iconfont icon-home"></i>
+              <p>首页</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="iconfont icon-faxian"></i>
+              <p>发现</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="iconfont icon-shangdian"></i>
+              <p>店铺</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover">
+              <i class="iconfont icon-gouwuchexiantiao"></i>
+              <p>购物车</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="iconfont icon-wode"></i>
+              <p>我的</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="../exjs/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+  <script type="text/javascript" src="../js/cart.js"></script>
+</body>
+</html>

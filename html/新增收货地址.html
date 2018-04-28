@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新增收货地址</title>
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+<body>
+  <div class="new-receiving-address">
+    <header>
+      <a class="section-side return" href="#">
+        <i class="iconfont icon-zuo"></i>
+      </a>
+      <section class="section-title">新增收货地址</section>
+    </header>
+    <section class="content">
+      <div class="module">
+        <div class="title">收件人姓名</div>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="module">
+        <div class="title">手机号</div>
+        <input type="number" class="form-control" />
+      </div>
+      <div class="module">
+        <div class="title">省 市 区</div>
+        <div class="module-select city-select">
+          <span class="in-mi select-txt">请选择</span>
+          <i class="iconfont icon-icon-- in-mi"></i>
+        </div>
+      </div>
+      <div class="module">
+        <div class="title">乡/镇/街道</div>
+        <div class="module-select area-select">
+          <span class="in-mi select-txt">请选择</span>
+          <i class="iconfont icon-icon-- in-mi"></i>
+        </div>
+      </div>
+      <div class="module module-column">
+        <div class="title">详细地址（无需重复填写省市区）</div>
+        <textarea class="form-textarea"></textarea>
+      </div>
+      <div class="module section-module">
+        <div class="title">设为默认地址</div>
+        <div class="setting-redio hover">
+          <label>
+            <i class="iconfont icon-danxuan"></i>
+            <i class="iconfont icon-danxuan1"></i>
+            <input type="checkbox" name="default-address" value="0" checked hidden />
+          </label>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="btn-confirm">确认</div>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="../exjs/jquery.min.js"></script>
+  <script type="text/javascript" src="../exjs/mobileSelect.min.js"></script>
+  <script type="text/javascript" src="../js/new_receiving_address.js"></script>
+</body>
+</html>

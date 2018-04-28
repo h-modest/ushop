@@ -1,0 +1,279 @@
+@import "common.less";
+
+.personal {
+  min-height: 100vh;
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    line-height: 2.5rem;
+    .section-side {
+      width: 3rem;
+      color: @dark;
+      position: relative;
+      .iconfont {
+        font-size: 1rem;
+      }
+    }
+    .section-title {
+      flex: 1;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0 3.5rem 0;
+    .personal-info {
+      display: flex;
+      border-bottom: 1px solid @border-gray;
+      align-items: stretch;
+      background: @white;
+      .portrait {
+        width: 4rem;
+        padding: .8rem 0;
+        text-align: center;
+        .portrait-pic,
+        .portrait-default {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+        }
+        .portrait-default {
+          background: @light-gray;
+          line-height: 3rem;
+          margin: 0 auto;
+          font-size: .65em;
+        }
+      }
+      .title {
+        flex: 1;
+        padding: 1rem 0;
+        p {
+          font-size: .9em;
+        }
+        .tel {
+          font-size: .75em;
+          margin: .3rem 0;
+        }
+      }
+      .tab-switch {
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .shop-info {
+      margin: .6rem 0;
+      border-top: 1px solid @border-gray;
+      border-bottom: 1px solid @border-gray;
+      .balance {
+        display: flex;
+        padding: .4rem 1.5rem;
+        align-items: center;
+        border-bottom: 1px solid @border-gray;
+        background: @white;
+        .sum {
+          flex: 1;
+          .inferior {
+            font-size: .7em;
+          }
+          .remain {
+            font-size: 1.1em;
+            color: @main;
+            margin: .3rem 0;
+          }
+        }
+        .top-up {
+          width: 4rem;
+          text-align: center;
+          .btn-top-up {
+            padding: .25rem 1rem;
+            border: 1px solid @border-gray;
+            border-radius: .4rem;
+            font-size: .8em;
+          }
+        }
+      }
+      .order-center {
+        margin-top: .6rem;
+        border-bottom: 1px solid @border-gray;
+        background: @white;
+        .title {
+          font-size: .9em;
+          border-bottom: .5px solid @border-gray;
+          padding: .4rem;
+          .order-title {
+            display: inline-block;
+            padding-left: .2rem;
+            border-left: .15rem solid @dark;
+          }
+          .order-more {
+            font-weight: normal;
+            font-size: .8em;
+            float: right;
+            width: 6rem;
+            height: 1.5rem;
+            text-align: center;
+            .iconfont {
+              margin-left: .3rem;
+            }
+          }
+        }
+        ul {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          padding: .4rem;
+          li {
+            flex: 1;
+            a {
+              display: block;
+              padding: .5rem;
+              font-size: .9em;
+              .iconfont {
+                font-size: 1.4em;
+                position: relative;
+                .num {
+                  position: absolute;
+                  top: -.3rem;
+                  right: -.6rem;
+                  width: 1rem;
+                  height: 1rem;
+                  border: 1px solid @main;
+                  color: @main;
+                  font-size: .5em;
+                  border-radius: 50%;
+                  background: @white;
+                  line-height: 1rem;
+                }
+              }
+              p {
+                margin-top: .1rem;
+                font-size: .75em;
+              }
+            }
+          }
+        }
+      }
+      .logistics {
+        background: @white;
+        dl {
+          dd {
+            display: flex;
+            padding: .5rem;
+            align-items: center;
+            .news {
+              width: 3rem;
+              font-size: .6em;
+              .date {
+                margin-top: .3rem;
+              }
+            }
+            .logistics-icon {
+              padding-left: .6rem;
+              margin: 0 .6rem;
+              border-left: 1px solid @dark-gray;
+              position: relative;
+              &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -0.2rem;
+                transform: translateY(-50%);
+                width: .4rem;
+                height: .4rem;
+                border-radius: 50%;
+                background: @border-gray;
+              }
+              .icon {
+                width: 2.4rem;
+                height: 2.4rem;
+                background: @light-gray;
+                text-align: center;
+                line-height: 2.4rem;
+                color: @gray;
+                .iconfont {
+                  font-size: 1.5em;
+                }
+              }
+            }
+            .detail {
+              flex: 1;
+              .introduce {
+                color: @main;
+                font-size: .9em;
+                .iconfont {
+                  margin-right: .5rem;
+                }
+              }
+              .inferior {
+                font-size: .7em;
+                margin-top: .2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .module {
+      margin-bottom: .6rem;
+      background: @white;
+      border-top: 1px solid @border-gray;
+      border-bottom: 1px solid @border-gray;
+      display: flex;
+      align-items: center;
+      .module-title {
+        flex: 1;
+        padding: .3rem 0 .3rem 1rem;
+        .title {
+          font-size: .9em;
+
+        }
+        .title, .iconfont {
+          vertical-align: middle;
+        }
+        .iconfont {
+          font-size: 1.2em;
+          margin-right: .4rem;
+        }
+      }
+      .tab-switch,
+      .tab-fixed {
+        padding: .3rem .5rem;
+        width: 8rem;
+        font-size: .8em;
+        text-align: right;
+        min-height: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .iconfont {
+          margin-left: .4rem;
+        }
+        .address {
+          width: 7rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: @white;
+    width: 100vw;
+  }
+}

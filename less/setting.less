@@ -1,0 +1,103 @@
+@import "common.less";
+
+.setting {
+  min-height: 100vh;
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0 .6rem 0;
+    background: @label;
+    .security {
+      margin: .6rem 0;
+      background: @white;
+      border-top: 1px solid @border-gray;
+      border-bottom: 1px solid @border-gray;
+      ul {
+        li {
+          display: flex;
+          border-bottom: 1px solid @light-gray;
+          font-size: .95em;
+          &:last-child {
+            border-bottom: none;
+          }
+          .title {
+            flex: 1;
+            padding: .6rem 0 .6rem 1.5rem;
+            .inferior {
+              font-size: .8em;
+              margin-left: 1rem;
+            }
+          }
+          .tab-switch {
+            width: 5rem;
+            padding: .6rem .6rem .6rem 0;
+            text-align: right;
+          }
+        }
+      }
+    }
+    .module {
+      display: flex;
+      background: @white;
+      margin-bottom: .6rem;
+      font-size: .95em;
+      .title {
+        flex: 1;
+        padding: .6rem 0 .6rem 1.5rem;
+      }
+      .tab-switch {
+        width: 5rem;
+        text-align: right;
+        padding: .6rem 1.5rem .6rem 0;
+        .inferior {
+          font-size: .8em;
+        }
+        .iconfont {
+          margin-left: .3rem;
+        }
+      }
+    }
+    .module-extra {
+      display: block;
+      padding: .6rem 0;
+      text-align: center;
+      background: @white;
+      margin-bottom: .6rem;
+      font-size: .95em;
+    }
+  }
+}

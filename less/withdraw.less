@@ -1,0 +1,151 @@
+@import "common.less";
+
+.withdraw {
+  background: @label;
+  min-height: 100vh;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    line-height: 2.5rem;
+    .section-side {
+      width: 3rem;
+      color: @dark;
+      position: relative;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+      .icon-kefu {
+        font-size: 1em;
+      }
+    }
+    .section-title {
+      flex: 1;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 3.2rem 1rem 0 1rem;
+    .info {
+      padding: .6rem 0;
+      background: @white;
+      .bank-card {
+        padding: 0 1rem;
+        display: flex;
+        align-items: stretch;
+        background: @white;
+        font-size: .9em;
+        .title {
+          width: 6rem;
+          text-align: center;
+          padding: 1rem 0;
+        }
+        .card-info {
+          flex: 1;
+          padding: 1rem 0 1.5rem .4rem;
+          display: flex;
+          align-items: center;
+          .card-text {
+            flex: 1;
+            .main-txt {
+              color: @blue;
+            }
+            .inferior {
+              font-size: .9em;
+              margin-top: .3rem;
+            }
+          }
+          .tab-switch {
+            width: 2rem;
+            .iconfont {
+              font-size: 2em;
+            }
+          }
+        }
+      }
+      .card-add {
+        display: flex;
+        margin: .5rem 1.5rem;
+        padding: .5rem .8rem;
+        background: @withdraw-bg;
+        align-items: center;
+        color: @dark-gray;
+        .icon {
+          text-align: right;
+          width: 2.5rem;
+          &.plus {
+            text-align: left;
+          }
+          .iconfont {
+            font-size: 1.4em;
+          }
+          .icon-jia2 {
+            font-size: 1.2em;
+          }
+        }
+        .title {
+          font-size: .95em;
+        }
+      }
+      .withdraw-cash {
+        padding: .8rem 1.5rem .5rem 1.5rem;
+        p {
+          font-size: .9em;
+        }
+        .cash {
+          display: flex;
+          height: 3rem;
+          padding-top: 1rem;
+          align-items: center;
+          border-bottom: 1px solid @border-gray;
+          .icon {
+            width: 2.5rem;
+            font-size: 1.4em;
+            text-align: center;
+          }
+          input[type=number] {
+            flex: 1;
+            padding: .2rem .5rem;
+            height: 2.5rem;
+            font-size: 1em;
+          }
+        }
+      }
+      .balance {
+        padding: .5rem 1.5rem 1rem 1.5rem;
+        font-size: .9em;
+        .withdraw-all {
+          color: @blue;
+        }
+      }
+      .withdraw-group {
+        .btn-withdraw {
+          font-size: .9em;
+          display: block;
+          width: 8rem;
+          height: 2rem;
+          text-align: center;
+          line-height: 2rem;
+          border-radius: .6rem;
+          margin: 0 auto;
+          background: @main;
+        }
+      }
+    }
+  }
+}

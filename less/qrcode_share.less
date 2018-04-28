@@ -1,0 +1,123 @@
+@import "common.less";
+
+.qrcode-share {
+  text-align: center;
+  background: @qrcode-btn-bg;
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+  &.qrcode-share-1 {
+    background: -webkit-linear-gradient(@qrcode-share-1-top-bg, @qrcode-share-1-bottom-bg); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(@qrcode-share-1-top-bg, @qrcode-share-1-bottom-bg); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(@qrcode-share-1-top-bg, @qrcode-share-1-bottom-bg); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#f5b71d, #fdede0); /* 标准的语法 */
+    .qrl {
+      flex: 1;
+    }
+    .qrm {
+      flex: 1.014;
+      .qrcode-bg {
+        .recomand-user {
+          position: absolute;
+          top: 0;
+          left: -20%;
+          width: 130%;
+          height: 100%;
+          font-size: 12px;
+          .items-center;
+          color: @qrcode-font-color;
+          z-index: 100;
+        }
+      }
+    }
+    .qrr {
+      flex: 0.9628;
+    }
+  }
+  &.qrcode-share-2 {
+    background: @qrcode-share-2-bg;
+    .qrl {
+      flex: 1;
+    }
+    .qrm {
+      flex: 1.6421;
+      .qrcode-bg {
+        .recomand-user {
+          position: absolute;
+          top: 0;
+          left: -8%;
+          width: 110%;
+          height: 100%;
+          font-size: 12px;
+          .items-center;
+          color: @dark;
+          z-index: 100;
+        }
+      }
+    }
+    .qrr {
+      flex: 0.994;
+    }
+  }
+  &.qrcode-share-3 {
+    background: -webkit-linear-gradient(@qrcode-share-3-top-bg, @qrcode-share-3-bottom-bg); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(@qrcode-share-3-top-bg, @qrcode-share-3-bottom-bg); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(@qrcode-share-3-top-bg, @qrcode-share-3-bottom-bg); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#eb354f, #fff); /* 标准的语法 */
+    .qrl {
+      flex: 1;
+    }
+    .qrm {
+      flex: 2.168;
+      .qrcode-bg {
+        .recomand-user {
+          position: absolute;
+          top: 0;
+          left: -8%;
+          width: 110%;
+          height: 100%;
+          font-size: 12px;
+          .items-center;
+          color: @qrcode-font-color;
+          z-index: 100;
+        }
+      }
+    }
+    .qrr {
+      flex: 0.961;
+    }
+  }
+  .qrl {
+    flex: 3;
+  }
+  .qrcode-bg {
+    font-size: 0;
+    position: relative;
+    .qrcode-pic {
+      width: 100%;
+    }
+    .qrcode-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .recomand-user {
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 110%;
+      height: 100%;
+      font-size: 1rem;
+      .items-center;
+    }
+  }
+  .qrm {
+    flex: 3.9845;
+  }
+  .qrr {
+    flex: 2.8615;
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>二维码分享</title>
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+<body>
+  <div class="qrcode-share">
+    <div class="qrl">
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_01.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_04.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_07.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_10.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_13.jpg" class="qrcode-pic" />
+      </div>
+    </div>
+    <div class="qrm">
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_02.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_05.jpg" class="qrcode-pic" />
+        <img src="../image/index-adv.png" class="qrcode-img" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_08.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_11.jpg" class="qrcode-pic" />
+        <div class="recomand-user">推荐人:1583270018</div>
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_14.jpg" class="qrcode-pic" />
+      </div>
+    </div>
+    <div class="qrr">
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_03.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_06.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_09.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_12.jpg" class="qrcode-pic" />
+      </div>
+      <div class="qrcode-bg">
+        <img src="../image/qrcode/qrcode_15.jpg" class="qrcode-pic" />
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../exjs/jquery.min.js"></script>
+  <script type="text/javascript">
+      (function($, win, doc){
+            var setFontSize = function(def){// def 设置一个初始的宽度；
+                var font_html = doc.documentElement;
+                var nowWidth;
+                if(window.getComputedStyle){
+                    nowWidth = win.getComputedStyle(doc.body)['width'] || win.getComputedStyle(doc.documentElement)['width'];
+                }else{
+                    nowWidth = doc.body.currentStyle('width') || doc.documentElement.currentStyle('width');
+                }
+                // 去除单位（px）
+                nowWidth = nowWidth.replace(/px/g,"");
+                // 获取放大或缩小的比例
+                var reta = nowWidth/def*100;
+                font_html.style.fontSize = reta+"%"
+            };
+            // 用法 例：
+            setFontSize(600);
+            win.onresize  = function(){
+                setFontSize(600);
+
+            };
+      })(jQuery ,window, document)
+  </script>
+</body>
+</html>

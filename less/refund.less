@@ -1,0 +1,116 @@
+@import "common.less";
+
+.refund {
+  min-height: 100vh;
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0;
+    .good-list {
+      background: @white;
+      ul {
+        li {
+          display: flex;
+          padding: .6rem 1rem;
+          border-bottom: 1px solid @border-gray;
+          .good-pic {
+            width: 4.2rem;
+          }
+          .good-info {
+            flex: 1;
+            padding-left: .5rem;
+            font-size: .9em;
+            .title {
+              .line-overflow;
+              font-size: .9em;
+            }
+            .inferior {
+              margin-top: .3rem;
+              font-size: .65em;
+            }
+          }
+          .price {
+            width: 5rem;
+            font-size: .95em;
+            text-align: right;
+            .num {
+              margin-top: .6rem;
+              font-size: .75em;
+            }
+          }
+        }
+      }
+    }
+    .module {
+      margin-top: .6rem;
+      border-top: 1px solid @dark-gray;
+      padding: .6rem 1rem;
+      display: flex;
+      align-items: center;
+      background: @white;
+      font-size: .9em;
+      &:last-child {
+        margin-top: 0;
+        margin-bottom: .8rem;
+        border-bottom: 1px solid @dark-gray;
+      }
+      .title {
+        width: 4.5rem;
+      }
+      .detail {
+        .flex-1;
+      }
+      input[type=text] {
+        min-height: 1rem;
+        padding: .3rem .6rem;
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 100vw;
+    font-size: .95em;
+    .submit {
+      background: @main;
+      text-align: center;
+      line-height: 2.5rem;
+    }
+  }
+}

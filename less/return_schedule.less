@@ -1,0 +1,112 @@
+@import "common.less";
+
+.return-schedule {
+  min-height: 100vh;
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding-top: 3rem;
+    .good-info {
+      display: flex;
+      background: @white;
+      padding: .8rem 1rem;
+      border-bottom: 1px solid @light-gray;
+      .good-pic {
+        width: 4rem;
+        height: 4rem;
+      }
+      .info {
+        .flex-1;
+        padding-left: .6rem;
+        .title {
+          font-size: .9em;
+          .line-overflow;
+        }
+        .inferior {
+          font-size: .7em;
+          margin-top: .5rem;
+        }
+      }
+    }
+    .return-policy {
+      padding: .8rem 1rem;
+      background: @white;
+      margin-top: .3rem;
+      .express-info {
+        display: flex;
+        p {
+          margin-bottom: .5rem;
+          font-size: .9em;
+          color: @dark-gray;
+        }
+        .tab-switch {
+          width: 5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .btn-express {
+            font-size: .85em;
+            width: 5em;
+            height: 2.5rem;
+            background: @main;
+            border-radius: .4rem;
+            text-align: center;
+            line-height: 2.5rem;
+          }
+        }
+      }
+      .apply-voucher {
+        padding: .5rem 0;
+        .title {
+          margin-bottom: .8rem;
+          font-size: .95em;
+        }
+        ul {
+          li {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 .3rem .3rem 0;
+            .good-pic {
+              width: 5rem;
+              height: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

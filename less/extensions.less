@@ -1,0 +1,100 @@
+@import "common.less";
+
+.extensions {
+  min-height: 100vh;
+  background: @label;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding-top: 2.6rem;
+    .module {
+      display: flex;
+      background: @white;
+      font-size: .95em;
+      margin-bottom: .6rem;
+      border-top: 1px solid @border-gray;
+      border-bottom: 1px solid @border-gray;
+      &:first-child {
+        border-top: none;
+      }
+      .module-intro {
+        .flex-1;
+        padding: .8rem 0 .8rem .8rem;
+        .sub-dec {
+          font-size: .7em;
+          margin-top: .5rem;
+        }
+      }
+      .module-tab {
+        width: 6rem;
+        padding: .8rem 0;
+        .items-center;
+        .icon-circle {
+          width: 3rem;
+          height: 3rem;
+          background: @main;
+          text-align: center;
+          line-height: 3rem;
+          border-radius: 50%;
+          .iconfont {
+            font-size: 1.6em;
+          }
+        }
+      }
+    }
+    .share-module {
+      background: @white;
+      padding: 1.2rem 1rem;
+      font-size: .95em;
+      border-top: 1px solid @border-gray;
+      border-bottom: 1px solid @border-gray;
+      .sub-title {
+        margin-top: .5rem;
+        font-size: .75em;
+      }
+      .share-group {
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        .ml {
+          display: flex;
+          .share-icon {
+            color: @extensions-color;
+            .iconfont {
+              font-size: 2.8em;
+            }
+          }
+        }
+        .qgcode {
+          width: 6.5rem;
+          height: 6.5rem;
+          padding-right: .5rem;
+        }
+      }
+    }
+  }
+}

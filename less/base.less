@@ -1,0 +1,328 @@
+@import 'common.less';
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: @dark;
+}
+
+ul, ol {
+  list-style: none;
+  // li {
+  //   cursor: pointer;
+  // }
+}
+
+.fixed {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: @dark;
+}
+
+.ushop-checkbox {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  color: @dark-gray;
+  .pointer;
+  &::before {
+    content: "\e611";
+  }
+  &.selected {
+    color: @main;
+  }
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.inferior {
+  color: @dark-gray;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.in-mi {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+//轮播图样式
+
+.slideBox {
+  width: 100vw;
+  margin-bottom: -4px;
+  position:relative;
+  overflow:hidden;
+  .hd{
+    position:absolute;
+    height:28px;
+    line-height:28px;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index:1;
+    li{
+      display:inline-block;
+      width:5px;
+      height:5px;
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      border-radius:5px;
+      background:#333;
+      text-indent:-9999px;
+      overflow:hidden;
+      margin:0 6px;
+      &.on{
+        background:#fff;
+      }
+    }
+  }
+  .bd{
+    position:relative;
+    z-index:0;
+    li{
+      position:relative;
+      img {
+        width: 100%;
+        display:block;
+      }
+      a {
+        -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */
+      }
+      .tit{
+        display:block;
+        width:100%;
+        position:absolute;
+        bottom:0;
+        text-indent:10px;
+        height:28px;
+        line-height:28px;
+        color:#fff;
+      }
+    }
+  }
+}
+
+footer {
+  nav {
+    border-top: 1px solid @border-gray;
+    ul {
+      display: flex;
+      li {
+        flex: 1;
+        a {
+          display: flex;
+          height: 3.5rem;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: @dark-gray;
+          &.hover {
+            color: @dark;
+            .iconfont {
+              color: @main;
+            }
+          }
+          p {
+            font-size: .9em;
+          }
+          .iconfont {
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.exchange-goods,
+.return-purchase,
+.tracking-number {
+  .modal {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    transition: all .3s ease-in-out;
+    &.modal-show {
+      top: 0;
+      .modal-shadow {
+        display: block;
+      }
+      .modal-content {
+        bottom: 0;
+      }
+    }
+    .modal-shadow {
+      position: fixed;
+      top: 0;
+      height: 0;
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,.5);
+    }
+    .modal-content {
+      position: absolute;
+      bottom: -100vh;
+      left: 0;
+      background: @white;
+      width: 100vw;
+      transition: all .3s ease-in-out;
+      .modal-info {
+        padding: .6rem 1rem 0 1rem;
+        padding-bottom: 1rem;
+        .title {
+          text-align: center;
+          font-size: 1.1em;
+          margin-bottom: 1rem;
+        }
+        .reason-select {
+          li {
+            display: flex;
+            padding: .6rem 0;
+            border-bottom: 1px solid @border-gray;
+            .reason-redio {
+              width: 3rem;
+              color: @dark-gray;
+              text-align: center;
+              label {
+                cursor: pointer;
+                .icon-danxuan {
+                  display: none;
+                }
+                &.hover {
+                  .icon-danxuan1 {
+                    display: none;
+                  }
+                  .icon-danxuan {
+                    display: inline-block;
+                  }
+                }
+              }
+              .iconfont {
+                font-size: 1.4em;
+                &.icon-danxuan {
+                  color: @main;
+                }
+              }
+            }
+          }
+        }
+      }
+      .modal-close {
+        height: 3rem;
+        background: @main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.modal-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: @white;
+  z-index: 2000;
+  display: none;
+  &.show {
+    display: block;
+  }
+  .modal-header {
+    height: 2.6rem;
+    display: flex;
+    align-items: stretch;
+    .searching {
+      .flex-1;
+      .on-search {
+        margin: .4rem 0 .4rem .4rem;
+        background: @label;
+        display: flex;
+        border-radius: .6rem;
+        .icon {
+          width: 2rem;
+          color: @dark-gray;
+          text-align: center;
+          line-height: 1.8rem;
+          .iconfont {
+            font-size: 1.4em;
+          }
+        }
+        input[type=text] {
+          .flex-1;
+          padding: .2rem .5rem;
+          background: @label;
+          border-top-right-radius: .6rem;
+          border-bottom-right-radius: .6rem;
+        }
+      }
+    }
+    .modal-close {
+      width: 3.5rem;
+      .pointer;
+      .items-center;
+    }
+  }
+  .modal-content {
+    padding: 1rem .8rem;
+    font-size: .95em;
+    .history-header {
+      display: flex;
+      height: 1.8rem;
+      align-items: stretch;
+      line-height: 1.8rem;
+      .title {
+        .flex-1;
+        font-size: 1.1em;
+      }
+      .btn-empty {
+        width: 2.5rem;
+        .pointer;
+        text-align: center;
+      }
+    }
+    ul {
+      padding: .4rem 0;
+      font-size: .8em;
+      li {
+        display: inline-block;
+        margin-right: .5rem;
+        margin-bottom: .5rem;
+        a {
+          display: block;
+          padding: .4rem 1rem;
+          border-radius: 1rem;
+          background: @label;
+        }
+      }
+    }
+  }
+}

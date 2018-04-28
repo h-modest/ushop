@@ -1,0 +1,118 @@
+@import "common.less";
+
+.order-pay {
+  background: @label;
+  min-height: 100vh;
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0;
+    font-size: .95em;
+    .remark {
+      padding: .5rem 0;
+      text-align: center;
+      font-size: .9em;
+    }
+    .pay-type {
+      background: @white;
+      border-top: 1px solid @border-gray;
+      border-bottom: 1px solid @border-gray;
+      .title {
+        padding: .8rem 1rem;
+      }
+      ul {
+        li {
+          display: flex;
+          padding: .5rem 1rem;
+          border-top: 1px solid @border-gray;
+          align-items: center;
+          .pointer;
+          &.hover {
+            background: @pay-hover-bg;
+          }
+          .pay-icon {
+            width: 3.2rem;
+            padding-right: .5rem;
+            text-align: center;
+            &.alipay {
+              color: @alipay-bg;
+            }
+            &.wchat {
+              color: @wchat-bg;
+            }
+            &.alipay, &.wchat {
+              .iconfont {
+                font-size: 3em;
+              }
+            }
+            .icon {
+              width: 3rem;
+              height: 3rem;
+              border-radius: .4rem;
+              background: @main;
+              color: @white;
+              line-height: 3rem;
+              margin: 0 auto;
+              .iconfont {
+                font-size: 2em;
+              }
+            }
+            .icon-img {
+              width: 3rem;
+              height: 3rem;
+              background-size: cover;
+            }
+          }
+          .pay-txt {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: @white;
+    height: 2.5rem;
+    display: flex;
+    align-items: stretch;
+    line-height: 2.5rem;
+    font-size: .95em;
+    .total {
+      flex: 1;
+      padding: 0 1.5rem;
+    }
+    .btn-pay {
+      width: 6rem;
+      text-align: center;
+      background: @main;
+    }
+  }
+}

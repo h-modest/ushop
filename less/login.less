@@ -1,0 +1,36 @@
+.login {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'Microsoft YaHei';
+  .logo {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    flex: 2;
+    .item {
+      display: block;
+      width: 80vw;
+      padding: 0.8rem 0;
+      border: 1px solid #bbb;
+      text-align: center;
+      margin: 1.5rem auto;
+      color: #333;
+      text-decoration: none;
+      img {
+        height: 1.7rem;
+      }
+      &>.center {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &>.txt {
+        font-size: 1.1em;
+        padding-left: 1rem;
+      }
+    }
+  }
+}

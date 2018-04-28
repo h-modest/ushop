@@ -1,0 +1,164 @@
+@import "common.less";
+
+.tracking-number {
+  min-height: 100vh;
+  background: @label;
+  &.tracking-success {
+    background: @white;
+    .content, footer {
+      display: none;
+    }
+    .content-upload {
+      display: block;
+    }
+  }
+  header {
+    position: fixed;
+    background: @white;
+    width: 100vw;
+    height: 2.5rem;
+    z-index: 900;
+    border-bottom: 1px solid @border-gray;
+    .section-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3rem;
+      height: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      text-decoration: none;
+      color: @dark;
+      // &.return::after {
+      //   content: '';
+      //   width: 0.05rem;
+      //   height: 2rem;
+      //   position: absolute;
+      //   top: 0.25rem;
+      //   right: 0;
+      //   background: @border-gray;
+      // }
+    }
+    .section-title {
+      text-align: center;
+      line-height: 2.5rem;
+      &.shadow {
+        color: @gray;
+      }
+    }
+  }
+  .content {
+    padding: 2.5rem 0;
+    .rejected-info {
+      background: @white;
+      padding: .6rem 1rem;
+      border-bottom: 1px solid @border-gray;
+      .title {
+        width: 4.8rem;
+        font-size: .95em;
+        margin-bottom: .6rem;
+      }
+      .info {
+        display: flex;
+        .good-pic {
+          height: 4.5rem;
+        }
+        .good-info {
+          .flex-1;
+          padding-left: .8rem;
+          .line-overflow {
+            font-size: .9em;
+          }
+          .inferior {
+            font-size: .7em;
+            margin-top: .5rem;
+          }
+        }
+      }
+      .rows {
+        margin: .4rem 0;
+        font-size: .9em;
+        color: @dark-gray;
+      }
+    }
+    .module {
+      display: flex;
+      margin-top: .6rem;
+      padding: .5rem 1rem;
+      background: @white;
+      border-top: 1px solid @border-gray;
+      align-items: center;
+      font-size: .95em;
+      &:last-child {
+        margin-top: 0;
+        margin-bottom: .8rem;
+        border-bottom: 1px solid @border-gray;
+      }
+      .title {
+        width: 5.2rem;
+        font-size: .95em;
+      }
+      .flex-1 {
+        padding: .3rem .5rem;
+        min-height: 1.5rem;
+        background: @label;
+      }
+      .deliver-title {
+        flex: 1;
+      }
+      .deliver-type {
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: 2rem;
+        font-size: .8em;
+        color: @dark-gray;
+        .pointer;
+        .iconfont {
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
+  .content-upload {
+    padding: 2.5rem 0;
+    display: none;
+    .upload-info {
+      display: flex;
+      min-height: 6rem;
+      background: @main;
+      align-items: center;
+      justify-content: center;
+      font-size: .95em;
+      .iconfont {
+        font-size: 1.2em;
+        margin-right: .5rem;
+      }
+    }
+    .btn-return {
+      display: block;
+      width: 6rem;
+      height: 1.6rem;
+      border-radius: .8rem;
+      border: 1px solid @dark;
+      text-align: center;
+      line-height: 1.6rem;
+      margin: 1.5rem auto;
+      font-size: .9em;
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 100vw;
+    font-size: .95em;
+    .submit {
+      background: @main;
+      text-align: center;
+      line-height: 2.5rem;
+    }
+  }
+}
